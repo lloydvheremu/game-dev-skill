@@ -1,0 +1,27 @@
+{
+  "name": "@lloydvheremu/game-development-lifecycle",
+  "version": "1.0.0",
+  "description": "Spec-first waterfall workflow for taking a game idea to a shipped game with AI.",
+  "bin": {
+    "game-dev-lifecycle": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "SKILL.md",
+    "references"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lloydvheremu/game-dev-skill.git"
+  },
+  "keywords": [
+    "claude",
+    "skill",
+    "game-development",
+    "ai-agent"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
