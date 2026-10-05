@@ -1,6 +1,6 @@
 {
   "name": "@lloydvheremu/game-development-lifecycle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spec-first waterfall workflow for taking a game idea to a shipped game with AI.",
   "bin": {
     "game-dev-lifecycle": "bin/cli.js"
