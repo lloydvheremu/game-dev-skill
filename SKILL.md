@@ -1,5 +1,5 @@
 ---
-name: game-development-lifecycle
+name: "game-development-lifecycle"
 description: A waterfall-style, spec-first workflow for taking a rough game idea all the way to a shipped game, with AI doing the design, planning and coding. Use this whenever the user mentions making a game, a game idea, game concept, game design document, GDD, game vision, game scope, game spec, prototype, vertical slice, or wants an AI coding agent to build a game in any engine or genre (three.js, Unity, Godot, Unreal, Phaser and others), even if they only say "I have an idea for a game" or "let's vibecode a game". Also use it to check a new feature against an existing design, to write a change request, or to continue a game project that already has a spec folder.
 ---
 
@@ -49,6 +49,7 @@ If the environment has no filesystem, produce each artifact in the chat, one per
 | 1 Concept and Vision | `references/phase-1-concept-and-vision.md` |
 | 2 Core Loop Validation | `references/phase-2-core-loop-validation.md` |
 | 3 Specification | `references/phase-3-specification.md` |
+| 3 Assets (all types) | `references/phase-3-assets.md` |
 | 4 Implementation Research | `references/phase-4-implementation-research.md` |
 | 5 Implementation Plan | `references/phase-5-implementation-plan.md` |
 | 6 to 8 Build, Verify, Release | `references/phase-6-to-8-build-verify-release.md` |
