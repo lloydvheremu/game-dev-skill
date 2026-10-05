@@ -57,6 +57,7 @@ Data formats (levels, saves, config):
 Asset formats and naming:
 Third-party dependencies (each with a reason):
 Known technical risks:
+Module contracts (only if parallel execution is planned): for each module, its owned path, public interface, events it emits or consumes, and data schemas it shares. See references/agentic-execution.md.
 ```
 
 Do not leave the engine version unpinned. Version drift is a major cause of hallucinated or broken API usage. If the user has not chosen a version, research the current stable one and propose it for approval.
@@ -78,6 +79,7 @@ List conflicts as `Design Conflict: <what, where, options, recommendation>` and 
 - All spec files are complete, with IDs, and Design Review found no open conflicts.
 - Scope is signed off, with an explicit out-of-scope list.
 - Engine and version are pinned.
+- If parallel execution is planned, module contracts are defined and no two modules claim the same path.
 - Each file header reads `Status: FROZEN <date>, v1.0`.
 - The user has explicitly said the specs are approved and frozen.
 

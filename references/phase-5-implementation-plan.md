@@ -9,12 +9,21 @@ Goal: convert the frozen specs and research into an ordered list of build tasks,
 - Build Must features first. Should features start only after every Must is verified.
 - Each task has a definition of done taken from the requirement's acceptance line.
 
+## Plan-time research
+
+Planning exposes unknowns that Phase 4 did not. Before ordering tasks, list them: every E-class item, every research entry marked `Verified: partly` or `no`, every integration of known systems, and every task you cannot size. Resolve them with research entries in the `20_Impl_Research.md` format.
+
+With subagents available, dispatch one researcher per unknown in parallel (brief, time-box and output format are in `references/agentic-execution.md`). Researchers return findings and options. They never change the plan or the specs. Run at most two research rounds. Anything still unresolved goes into "Risks and unknowns" and is shown at Gate 4.
+
+The ordering of tasks, the dependency graph and the wave assignment are done by one agent (the orchestrator), because they need the whole picture.
+
 ## Template for 21_Impl_Plan.md
 
 ```
 Milestone 1: <playable outcome>
   T1.1  <task>   Satisfies: MECH-01, TECH-02   Research: see 20_Impl_Research #1
         Done when: <acceptance from spec>
+        (parallel plans only) Depends on: <task IDs>   Owns: <paths, exclusive write>   Wave: <n>
   T1.2  ...
 Milestone 2: ...
 
@@ -48,4 +57,6 @@ Why it fails: no traceability, no definition of done, nothing the agent can exec
 - Every Must requirement appears in at least one task.
 - No task lacks an ID.
 - Each milestone produces something the user can play or inspect.
+- Every E-class item has a spike result, or is listed as an accepted risk.
+- For parallel plans: no two tasks in the same wave own the same path, and every dependency points to an earlier wave.
 - The user has approved the plan.

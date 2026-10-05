@@ -21,6 +21,14 @@ Blocking: yes
 - After each milestone, run it and compare against the acceptance lines before moving on.
 - Commit or checkpoint at each milestone so a bad change is cheap to undo.
 
+### Parallel build rules (only when running parallel agents)
+
+- Each builder works in its own worktree or branch and edits only the paths its task owns. Needing a change elsewhere means a request to the orchestrator, not a quiet edit.
+- A blocking Spec Query pauses only the tasks that depend on the blocked task. Everything else in the wave continues.
+- Technical queries (does this API exist, what is the documented way) may be answered by a researcher. Design gaps always go to the human.
+- A builder never marks its own work verified. A separate verifier checks the task's `Done when` line before the orchestrator merges.
+- Full protocol: `references/agentic-execution.md`.
+
 ## Phase 7: Verification
 
 Check the build against the spec, not against impressions. Write `30_Verification.md`:
@@ -29,6 +37,8 @@ Check the build against the spec, not against impressions. Write `30_Verificatio
 Requirement | Acceptance | Result (Pass/Fail) | Evidence
 MECH-03 | one tap = 90 degrees after 150 ms | Pass | recorded test, 10 of 10 taps correct
 ```
+
+With parallel verification, each verifier writes a fragment (`game-spec/verification/<group>.md`) and the orchestrator assembles them into `30_Verification.md`. Verifiers read the specs and tests only and never fix code.
 
 Then a short playtest report. Keep it evidence-based:
 

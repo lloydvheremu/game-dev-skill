@@ -35,6 +35,10 @@ Decided by / date:
 4. If approved, update the affected spec files with new IDs or revised text, bump their version, add the CR number to a change log at the bottom of each, and update the Implementation Plan.
 5. Then build.
 
+### If agents are running in parallel
+
+Before step 4, the orchestrator pauses every in-flight task that cites an affected ID and marks it `invalidated` on its board file. Unaffected tasks keep running. After approval, the orchestrator re-plans the invalidated tasks (new IDs, new contracts, new waves if needed) and re-dispatches them. Work already merged that cites a changed ID is re-verified.
+
 ## Quality example: a rejection
 
 ```

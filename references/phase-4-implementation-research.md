@@ -24,6 +24,10 @@ Skip research entirely for A-level items so simple that no meaningful alternativ
 
 Verify that every API you plan to use exists in the pinned version. If you cannot verify, mark it unverified.
 
+## Parallel research (optional)
+
+If the environment supports subagents, dispatch one researcher per cluster of A, B and C items, and one time-boxed spike per E item. D items need no researcher. Each researcher returns entries in the format below and recommends, never decides. Anything that would change the design becomes a Spec Query or Design Conflict for the human. Details: `references/agentic-execution.md`.
+
 ## Step 3: Write 20_Impl_Research.md
 
 ```

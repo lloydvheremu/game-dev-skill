@@ -27,6 +27,10 @@ Pass criteria:
 
 Build a single runnable file where possible (for a browser game, one HTML file). Give the user the run instructions and the question list.
 
+### Parallel variants (optional)
+
+If the core loop has two or three plausible forms, subagents can each build one disposable variant in its own folder, under the same test plan. The human plays them and the report compares them. All variants stay throwaway code. See `references/agentic-execution.md`.
+
 ## Step 3: Write 01_Core_Loop_Report.md
 
 ```

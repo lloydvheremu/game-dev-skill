@@ -53,6 +53,7 @@ If the environment has no filesystem, produce each artifact in the chat, one per
 | 4 Implementation Research | `references/phase-4-implementation-research.md` |
 | 5 Implementation Plan | `references/phase-5-implementation-plan.md` |
 | 6 to 8 Build, Verify, Release | `references/phase-6-to-8-build-verify-release.md` |
+| Parallel / multi-agent execution | `references/agentic-execution.md` (only when the conditions in it are met) |
 | After freeze, any change | `references/change-control.md` |
 | Genre adjustments | `references/genres/` (puzzle, racing, narrative-exploration) |
 
@@ -63,6 +64,14 @@ Every approved requirement gets a stable ID (`MECH-01`, `ART-04`, `TECH-02`, `UI
 ## Roles
 
 Do not hard-code a team. In Phase 3, derive the needed specialist responsibilities from the game (a puzzle game may need only puzzle design and UX, a racing game adds vehicle, track and network work). Each role is a responsibility that reads the frozen specs and produces a spec or asset, not a persona. Always include a **Design Review** responsibility: it checks every proposed addition against the Vision and Scope. If real subagents are available, roles can be subagents. Otherwise run them as sequential passes with distinct headings.
+
+Execution responsibilities (Orchestrator, Researcher, Builder, Verifier) are separate from these spec-owning roles. They do not own specs, and are defined in `references/agentic-execution.md`.
+
+## Parallel (agentic) execution
+
+Parallel agents change who does the work, never what is allowed. Gates stay human, specs stay frozen, and every task still cites requirement IDs. Fan-out is available in Phases 2 to 5 (spikes, research, estimates) and 6 to 7 (build waves, verification). Plan synthesis, merging and every gate stay with one orchestrator and the human.
+
+Use it only when the environment supports subagents or worktrees AND the plan has a wave of 4 or more independent tasks. Otherwise run the same artifacts sequentially. Read `references/agentic-execution.md` before dispatching any parallel agent. Ready-made agent definitions are in `agents/`.
 
 ## Quality bar for every artifact
 
